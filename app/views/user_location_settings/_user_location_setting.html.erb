@@ -1,0 +1,36 @@
+<p>
+    <strong>Location nickname:</strong>
+    <%= user_location_setting.name %>
+</p>
+
+<p>
+    <strong>Location refresh ttl:</strong>
+    <%= user_location_setting.cache_ttl %>
+</p>
+
+<p>
+    <strong>City:</strong>
+    <%= user_location_setting.location.city.titleize %>
+</p>
+
+<p>
+    <strong>Country Code:</strong>
+    <%= user_location_setting.location.coutry_code.upcase %>
+</p>
+    
+<p>
+    <strong>Tempreture:</strong>
+    <%= user_location_setting.get_current_weather.temp %>
+</p>
+
+<p>
+    <strong>Last Weather Update:</strong>
+    <%= user_location_setting.get_current_weather.created_at %>
+</p>
+
+<p>
+    <%= link_to "Delete User Location", [user_location_setting.user, user_location_setting], data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+            } %>
+</p>

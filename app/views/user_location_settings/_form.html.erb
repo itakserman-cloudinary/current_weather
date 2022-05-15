@@ -1,0 +1,25 @@
+<%= form_with model: [ user, user.user_location_settings.build ] do |form| %>
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.label :coutry_code, style: "display: block" %>
+    <%= form.text_field :coutry_code %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :cache_ttl, style: "display: block" %>
+    <%= form.text_field :cache_ttl %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

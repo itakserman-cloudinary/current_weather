@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+<div>
+  <h2><%= @user.full_name %></h2>
+  <h2><%= @user.email %></h2>
+  <%= image_tag(@user.avatar, :alt => "rss feed") %>
+</div>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
+
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>
+
+<div>
+  <h2>Locations</h2>
+  <%= render @user.user_location_settings %>
+
+  <%= render "user_location_settings/form", user: @user %>
+</div>

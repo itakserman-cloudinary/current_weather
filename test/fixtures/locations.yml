@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  coutry_code: MyString
+  lat: 9.99
+  lon: 9.99
+
+two:
+  city: MyString
+  coutry_code: MyString
+  lat: 9.99
+  lon: 9.99

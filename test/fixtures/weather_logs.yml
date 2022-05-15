@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temp: 9.99
+  latest: false
+  location: one
+
+two:
+  temp: 9.99
+  latest: false
+  location: two
