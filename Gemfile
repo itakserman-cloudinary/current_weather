@@ -76,3 +76,4 @@ gem "countries", "~> 5.0"
 gem "dotenv", "~> 2.7"
 
 gem "rest-client", "~> 2.1"
+gem "rspec-rails", group: [:development, :test]
