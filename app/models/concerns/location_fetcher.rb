@@ -3,7 +3,7 @@ module LocationFetcher
     class_methods do
         def fetch(params)
             location = Location.where("city = ? AND coutry_code = ?", 
-              params[:city], params[:coutry_code]).first
+              params[:city].downcase, params[:coutry_code].downcase).first
             if location.nil?
               location = Location.new(
                   coutry_code: params[:coutry_code],
