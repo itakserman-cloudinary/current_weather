@@ -27,5 +27,10 @@ RSpec.describe UserLocationSetting, :type => :model do
             new_logs = location.weather_logs.where(latest: true)
             expect(new_logs.empty?).to eql false
         end
+
+        it "get_current_weather_returns_current" do
+            current_weather = user_location_setting.get_current_weather
+            expect(current_weather.id).to eq weather_log_new.id
+        end
     end
 end
